@@ -1,0 +1,64 @@
+# ==========================================
+# MilliyGram — Git Ignore qoidalari
+# ==========================================
+
+# 1. Maxfiy ma'lumotlar, kalitlar va zaxira nusxalar (HECH QACHON GITHUB'GA CHIQMASIN!)
+.env
+*.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.jks
+*.crt
+*.dump
+*.sql
+*.bak
+docs/*xavfsizlik*
+docs/*security*
+docs/*.pdf
+
+# 2. Maven va Java build fayllari
+target/
+app/target/
+*.class
+*.war
+*.jar
+*.ear
+*.nar
+hs_err_pid*
+replay_pid*
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# 3. IntelliJ IDEA va boshqa IDE fayllari
+.idea/
+app/.idea/
+*.iws
+*.iml
+*.ipr
+out/
+app/out/
+.apt_generated/
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+.vscode/
+
+# 4. Foydalanuvchi yuklagan media fayllar va loglar
+mini_blog_uploads/
+uploads/
+logs/
+*.log
+
+# 5. Operatsion tizim vaqtinchalik fayllari
+.DS_Store
+Thumbs.db
+Desktop.ini
+*~

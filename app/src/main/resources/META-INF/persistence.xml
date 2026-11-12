@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_2.xsd"
+             version="3.2">
+    <persistence-unit name="mini_blog">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>uz.pdp.mini_blok_with_jakarta.entity.AuthUser</class>
+        <class>uz.pdp.mini_blok_with_jakarta.entity.Post</class>
+        <class>uz.pdp.mini_blok_with_jakarta.entity.PostLike</class>
+        <class>uz.pdp.mini_blok_with_jakarta.entity.SavedPost</class>
+        <class>uz.pdp.mini_blok_with_jakarta.entity.Comment</class>
+        <class>uz.pdp.mini_blok_with_jakarta.entity.CommentLike</class>
+        <class>uz.pdp.mini_blok_with_jakarta.entity.Follow</class>
+        <class>uz.pdp.mini_blok_with_jakarta.entity.Complaint</class>
+        <class>uz.pdp.mini_blok_with_jakarta.entity.ChatMessage</class>
+        <class>uz.pdp.mini_blok_with_jakarta.entity.MessageLike</class>
+        <class>uz.pdp.mini_blok_with_jakarta.entity.Story</class>
+        <class>uz.pdp.mini_blok_with_jakarta.entity.PostView</class>
+        <class>uz.pdp.mini_blok_with_jakarta.entity.AdminUser</class>
+        <class>uz.pdp.mini_blok_with_jakarta.entity.AdminLog</class>
+
+        <!-- DIQQAT: Haqiqiy parolni bu yerga YOZMANG!
+             DB_URL, DB_USER va DB_PASSWORD qiymatlarini muhit o'zgaruvchilari (Environment Variables)
+             yoki loyiha ildizidagi .env fayli orqali bering (BaseDao.java ularni avtomatik o'qiydi). -->
+        <properties>
+            <property name="jakarta.persistence.jdbc.url"
+                      value="jdbc:postgresql://localhost:5432/mini_blog?currentSchema=public"/>
+            <property name="jakarta.persistence.jdbc.user" value="postgres"/>
+            <property name="jakarta.persistence.jdbc.password" value="CHANGE_ME_IN_ENV"/>
+            <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
+            <property name="hibernate.show_sql" value="false"/>
+        </properties>
+    </persistence-unit>
+</persistence>
